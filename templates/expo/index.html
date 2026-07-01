@@ -1,0 +1,21 @@
+{% extends 'expo/base.html' %}
+
+{% block content %}
+
+{% include 'expo/partials/sidebar.html' %}
+
+<div id="presentation">
+
+    {% include 'expo/slides/slide01_cover.html' %}
+    {% include 'expo/slides/slide02_objective.html' %}
+    {% include 'expo/slides/slide03_map.html' %}
+    {% include 'expo/slides/slide04_rules.html' %}
+    {% include 'expo/slides/slide05_algorithms.html' %}
+    {% include 'expo/slides/slide06_decisions.html' %}
+    {% include 'expo/slides/slide07_bfs.html' %}
+    {% include 'expo/slides/slide08_heatmap.html' %}
+    {% include 'expo/slides/slide09_report.html' %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,189 @@
+/* ======================================================
+   PRESENTATION
+====================================================== */
+
+#presentation{
+    width:100%;
+}
+
+/* ======================================================
+   SLIDE
+====================================================== */
+
+.slide{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+    scroll-snap-align:start;
+
+    overflow:hidden;
+
+}
+
+/* ======================================================
+   PAPER
+====================================================== */
+
+.paper{
+
+    width:min(1500px,94vw);
+
+    height:min(900px,92vh);
+
+    background:var(--paper);
+
+    border-radius:28px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow-md);
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    position:relative;
+
+}
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.slide-header{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    padding:45px 60px 25px;
+
+}
+
+.slide-header-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.slide-page{
+
+    font-size:.95rem;
+
+    font-weight:700;
+
+    color:var(--text-light);
+
+    letter-spacing:.5px;
+
+}
+
+/* ======================================================
+   BODY
+====================================================== */
+
+.slide-body{
+
+    flex:1;
+
+    padding:20px 60px;
+
+}
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+.slide-footer{
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ======================================================
+   LAYOUTS
+====================================================== */
+
+.layout-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
+
+    height:100%;
+
+}
+
+.layout-two{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    width:100%;
+
+    height:100%;
+
+    align-items:center;
+
+}
+
+.layout-three{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:40px;
+
+}
+
+.layout-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.layout-grid-4{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    grid-template-rows:repeat(2,1fr);
+
+    gap:30px;
+
+}

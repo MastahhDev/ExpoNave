@@ -1,0 +1,42 @@
+html{
+
+    scroll-behavior:smooth;
+
+    scroll-snap-type:y mandatory;
+
+}
+
+body{
+
+    overflow-x:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--background-1),
+            var(--background-2)
+        );
+
+    color:var(--text);
+
+    font-family:
+        "Segoe UI",
+        sans-serif;
+
+}
+
+/* Scroll */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#D3D7DF;
+
+    border-radius:20px;
+
+}

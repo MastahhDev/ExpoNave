@@ -1,0 +1,94 @@
+<section class="slide" id="slide-8">
+
+    <div class="paper">
+
+        <header class="slide-header animate fade-up">
+
+            <div class="slide-number">
+                08
+            </div>
+
+            <div class="section-title">
+
+                <span class="section-badge">
+                    RESULTADOS
+                </span>
+
+                <h1>Heatmap</h1>
+
+                <p>
+                    Visualización de las zonas recorridas.
+                </p>
+
+            </div>
+
+        </header>
+
+        <main class="slide-body">
+
+    <p class="slide-intro">La nave registra cada casilla visitada para evitar repetir caminos innecesarios.</p>
+
+    <div class="steps-grid">
+
+        <div class="step-card">
+            <h4>Inicio</h4>
+            <div class="heatmap-grid" style="grid-template-columns:repeat(5,1fr)">
+                <div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div>
+                <div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div>
+                <div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div>
+                <div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div>
+                <div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <h4>Después de algunos pasos</h4>
+            <div class="heatmap-grid" style="grid-template-columns:repeat(5,1fr)">
+                <div class="heat-cell heat-0"></div><div class="heat-cell heat-1"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div>
+                <div class="heat-cell heat-1"></div><div class="heat-cell heat-2"></div><div class="heat-cell heat-1"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div>
+                <div class="heat-cell heat-0"></div><div class="heat-cell heat-1"></div><div class="heat-cell heat-2"></div><div class="heat-cell heat-1"></div><div class="heat-cell heat-0"></div>
+                <div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-1"></div><div class="heat-cell heat-1"></div><div class="heat-cell heat-0"></div>
+                <div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <h4>Más exploración</h4>
+            <div class="heatmap-grid" style="grid-template-columns:repeat(5,1fr)">
+                <div class="heat-cell heat-1"></div><div class="heat-cell heat-2"></div><div class="heat-cell heat-1"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-1"></div>
+                <div class="heat-cell heat-2"></div><div class="heat-cell heat-3"></div><div class="heat-cell heat-2"></div><div class="heat-cell heat-1"></div><div class="heat-cell heat-0"></div>
+                <div class="heat-cell heat-1"></div><div class="heat-cell heat-2"></div><div class="heat-cell heat-3"></div><div class="heat-cell heat-2"></div><div class="heat-cell heat-1"></div>
+                <div class="heat-cell heat-0"></div><div class="heat-cell heat-1"></div><div class="heat-cell heat-2"></div><div class="heat-cell heat-2"></div><div class="heat-cell heat-1"></div>
+                <div class="heat-cell heat-0"></div><div class="heat-cell heat-0"></div><div class="heat-cell heat-1"></div><div class="heat-cell heat-1"></div><div class="heat-cell heat-0"></div>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <h4>Exploración avanzada</h4>
+            <div class="heatmap-grid" style="grid-template-columns:repeat(5,1fr)">
+                <div class="heat-cell heat-2"></div><div class="heat-cell heat-3"></div><div class="heat-cell heat-2"></div><div class="heat-cell heat-1"></div><div class="heat-cell heat-2"></div>
+                <div class="heat-cell heat-3"></div><div class="heat-cell heat-4"></div><div class="heat-cell heat-3"></div><div class="heat-cell heat-2"></div><div class="heat-cell heat-1"></div>
+                <div class="heat-cell heat-2"></div><div class="heat-cell heat-3"></div><div class="heat-cell heat-3"></div><div class="heat-cell heat-2"></div><div class="heat-cell heat-2"></div>
+                <div class="heat-cell heat-1"></div><div class="heat-cell heat-2"></div><div class="heat-cell heat-2"></div><div class="heat-cell heat-3"></div><div class="heat-cell heat-1"></div>
+                <div class="heat-cell heat-0"></div><div class="heat-cell heat-1"></div><div class="heat-cell heat-1"></div><div class="heat-cell heat-1"></div><div class="heat-cell heat-0"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mini-legend" style="margin-top:26px">
+        <span><i style="background:var(--background-1);border:1px solid var(--border)"></i> Menos visitado</span>
+        <span><i style="background:#E5484D"></i> Más visitado</span>
+    </div>
+
+</main>
+
+        <footer class="slide-footer">
+
+            {% include "expo/partials/arrow.html" %}
+
+        </footer>
+
+    </div>
+
+</section>

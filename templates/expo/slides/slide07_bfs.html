@@ -1,0 +1,94 @@
+<section class="slide" id="slide-7">
+
+    <div class="paper">
+
+        <header class="slide-header animate fade-up">
+
+            <div class="slide-number">
+                07
+            </div>
+
+            <div class="section-title">
+
+                <span class="section-badge">
+                    RECORRIDO
+                </span>
+
+                <h1>BFS</h1>
+
+                <p>
+                    Exploración paso a paso.
+                </p>
+
+            </div>
+
+        </header>
+
+        <main class="slide-body">
+
+    <div class="steps-grid">
+
+        <div class="step-card">
+            <h4>1. Inicio</h4>
+            <p>La nave inicia BFS desde su posición.</p>
+            <div class="mini-grid" style="grid-template-columns:repeat(4,1fr)">
+                <div class="mini-cell"></div><div class="mini-cell"></div><div class="mini-cell"></div><div class="mini-cell"></div>
+                <div class="mini-cell"></div><div class="mini-cell"></div><div class="mini-cell"></div><div class="mini-cell"></div>
+                <div class="mini-cell"></div><div class="mini-cell"></div><div class="mini-cell"></div><div class="mini-cell"></div>
+                <div class="mini-cell start"><i class="bi bi-rocket-takeoff-fill"></i></div><div class="mini-cell"></div><div class="mini-cell"></div><div class="mini-cell"></div>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <h4>2. Expansión</h4>
+            <p>Se exploran los nodos vecinos.</p>
+            <div class="mini-grid" style="grid-template-columns:repeat(4,1fr)">
+                <div class="mini-cell"></div><div class="mini-cell"></div><div class="mini-cell"></div><div class="mini-cell"></div>
+                <div class="mini-cell"></div><div class="mini-cell visited"></div><div class="mini-cell visited"></div><div class="mini-cell"></div>
+                <div class="mini-cell"></div><div class="mini-cell visited"></div><div class="mini-cell visited"></div><div class="mini-cell"></div>
+                <div class="mini-cell start"><i class="bi bi-rocket-takeoff-fill"></i></div><div class="mini-cell visited"></div><div class="mini-cell"></div><div class="mini-cell"></div>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <h4>3. Objetivo encontrado</h4>
+            <p>Se alcanza el objetivo (contenedor).</p>
+            <div class="mini-grid" style="grid-template-columns:repeat(4,1fr)">
+                <div class="mini-cell"></div><div class="mini-cell"></div><div class="mini-cell objective"><i class="bi bi-box-seam-fill"></i></div><div class="mini-cell"></div>
+                <div class="mini-cell"></div><div class="mini-cell visited"></div><div class="mini-cell path"></div><div class="mini-cell"></div>
+                <div class="mini-cell"></div><div class="mini-cell visited"></div><div class="mini-cell path"></div><div class="mini-cell"></div>
+                <div class="mini-cell start"><i class="bi bi-rocket-takeoff-fill"></i></div><div class="mini-cell path"></div><div class="mini-cell"></div><div class="mini-cell"></div>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <h4>4. Camino elegido</h4>
+            <p>La nave sigue el camino más corto.</p>
+            <div class="mini-grid" style="grid-template-columns:repeat(4,1fr)">
+                <div class="mini-cell"></div><div class="mini-cell"></div><div class="mini-cell objective"><i class="bi bi-box-seam-fill"></i></div><div class="mini-cell"></div>
+                <div class="mini-cell"></div><div class="mini-cell"></div><div class="mini-cell path"></div><div class="mini-cell"></div>
+                <div class="mini-cell"></div><div class="mini-cell"></div><div class="mini-cell path"></div><div class="mini-cell"></div>
+                <div class="mini-cell start"><i class="bi bi-rocket-takeoff-fill"></i></div><div class="mini-cell path"></div><div class="mini-cell"></div><div class="mini-cell"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mini-legend" style="margin-top:28px">
+        <span><i style="background:var(--primary)"></i> Inicio</span>
+        <span><i style="background:#CFE0FF"></i> Visitado</span>
+        <span><i style="background:#22A366"></i> Camino</span>
+        <span><i style="background:#7C5CFC"></i> Objetivo</span>
+    </div>
+
+</main>
+
+        <footer class="slide-footer">
+
+            {% include "expo/partials/arrow.html" %}
+
+        </footer>
+
+    </div>
+
+</section>

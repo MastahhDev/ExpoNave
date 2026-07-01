@@ -1,0 +1,279 @@
+/* ============================================
+   COMPONENTES COMPARTIDOS — SLIDES 2 a 9
+   ============================================ */
+
+.slide-intro{
+    font-size:16px;
+    color:var(--text-light);
+    margin-bottom:26px;
+    max-width:720px;
+}
+
+/* --- Icon badges --- */
+.icon-badge{
+    width:52px;
+    height:52px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    flex-shrink:0;
+}
+.icon-badge.purple{ background:#F1EEFE; color:#7C5CFC; }
+.icon-badge.green{  background:#EAFBF1; color:#22A366; }
+.icon-badge.blue{   background:#EAF1FF; color:var(--primary); }
+.icon-badge.orange{ background:#FFF3E8; color:#D9720C; }
+.icon-badge.red{    background:#FDEDED; color:#E5484D; }
+.icon-badge.gray{   background:#F1F2F5; color:#6B7280; }
+
+/* --- Cards de 2 columnas (slide 2) --- */
+.card-grid-2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    margin-bottom:24px;
+}
+.feature-card{
+    background:var(--background-1);
+    border:1px solid var(--border);
+    border-radius:var(--radius-md);
+    padding:26px;
+}
+.feature-card .icon-badge{ margin-bottom:16px; }
+.feature-card h3{ font-size:18px; margin:0 0 8px; color:var(--text); }
+.feature-card p{ font-size:14px; color:var(--text-light); line-height:1.5; margin:0; }
+
+/* --- Callout / Objetivo / Info --- */
+.callout{
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+    background:#EEF3FF;
+    border:1px solid #D9E4FF;
+    border-radius:var(--radius-md);
+    padding:20px 24px;
+}
+.callout .icon-badge{ width:40px; height:40px; font-size:18px; }
+.callout p{ margin:0; font-size:15px; color:var(--text); line-height:1.5; }
+.callout strong{ color:var(--primary); }
+
+/* --- Reglas (slide 4) --- */
+.rules-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:32px 44px;
+}
+.rule-card{ display:flex; gap:16px; }
+.rule-card .icon-badge{ width:44px; height:44px; font-size:19px; }
+.rule-card p{ margin:0; font-size:14.5px; color:var(--text-light); line-height:1.55; }
+
+/* --- Mapa (slide 3) --- */
+.map-wrap{
+    display:grid;
+    grid-template-columns:210px 1fr;
+    gap:36px;
+    align-items:start;
+}
+.legend-list{ display:flex; flex-direction:column; gap:14px; }
+.legend-item{ display:flex; align-items:center; gap:12px; font-size:14px; color:var(--text); }
+.legend-swatch{
+    width:28px; height:28px;
+    border-radius:7px;
+    display:flex; align-items:center; justify-content:center;
+    font-size:14px;
+    flex-shrink:0;
+}
+.legend-swatch.empty{ background:var(--background-1); border:1px solid var(--border); }
+
+.grid-map{
+    display:grid;
+    gap:5px;
+}
+.grid-cell{
+    aspect-ratio:1;
+    border-radius:6px;
+    background:var(--background-1);
+    border:1px solid var(--border);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:14px;
+}
+.grid-cell.nave{ background:#EAF1FF; color:var(--primary); }
+.grid-cell.asteroide{ background:#E4E6EA; color:#6B7280; }
+.grid-cell.contenedor{ background:#F1EEFE; color:#7C5CFC; }
+.grid-cell.combustible{ background:#EAFBF1; color:#22A366; }
+.grid-cell.base{ background:#EAF1FF; color:var(--primary); }
+
+/* --- Algoritmos (slide 5) --- */
+.algo-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:44px;
+}
+.algo-block h3{ font-size:16.5px; margin:0 0 6px; font-weight:700; }
+.algo-block.bfs h3{ color:var(--primary); }
+.algo-block.heur h3{ color:#D9720C; }
+.algo-block p.desc{ font-size:14px; color:var(--text-light); margin:0 0 18px; }
+
+.mini-grid{ display:grid; gap:5px; }
+.mini-cell{
+    aspect-ratio:1;
+    border-radius:5px;
+    background:var(--background-1);
+    border:1px solid var(--border);
+    display:flex; align-items:center; justify-content:center;
+    font-size:12px;
+    color:#fff;
+}
+.mini-cell.visited{ background:#CFE0FF; }
+.mini-cell.path{ background:#22A366; }
+.mini-cell.objective{ background:#7C5CFC; }
+.mini-cell.start{ background:var(--primary); }
+
+.num-table{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:6px;
+    width:190px;
+}
+.num-cell{
+    aspect-ratio:1;
+    border-radius:9px;
+    background:var(--background-1);
+    border:1px solid var(--border);
+    display:flex; align-items:center; justify-content:center;
+    font-weight:700;
+    font-size:16px;
+    color:var(--text-light);
+}
+.num-cell.center{ background:#EAFBF1; border-color:#B9EBCB; color:#1D8A52; }
+
+.mini-legend{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+    font-size:13px;
+    color:var(--text-light);
+    margin-top:14px;
+}
+.mini-legend span{ display:inline-flex; align-items:center; gap:6px; }
+.mini-legend i{ width:12px; height:12px; border-radius:3px; display:inline-block; }
+
+/* --- Flujo de decisiones (slide 6) --- */
+.flow-list{ display:flex; flex-direction:column; gap:14px; max-width:760px; }
+.flow-row{ display:flex; align-items:center; gap:18px; }
+.flow-box{
+    flex:1;
+    padding:16px 22px;
+    border-radius:var(--radius-sm);
+    font-size:14.5px;
+    font-weight:600;
+}
+.flow-box.q-green{  background:#EAFBF1; color:#1D8A52; }
+.flow-box.q-purple{ background:#F1EEFE; color:#6D4CE0; }
+.flow-box.q-orange{ background:#FFF3E8; color:#B85C00; }
+.flow-arrow{
+    color:var(--text-light);
+    font-size:14px;
+    display:flex; align-items:center; gap:8px;
+    white-space:nowrap;
+}
+.flow-result{ font-size:14px; color:var(--text); font-weight:600; white-space:nowrap; }
+
+/* --- Steps (slide 7) --- */
+.steps-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
+.step-card h4{ font-size:14px; color:var(--primary); margin:0 0 4px; font-weight:700; }
+.step-card p{ font-size:13px; color:var(--text-light); margin:0 0 14px; line-height:1.5; }
+
+/* --- Heatmap (slide 8) --- */
+.heatmap-grid{ display:grid; gap:4px; }
+.heat-cell{ aspect-ratio:1; border-radius:5px; }
+.heat-0{ background:var(--background-1); border:1px solid var(--border); }
+.heat-1{ background:#D6E4FF; }
+.heat-2{ background:#A9C6FF; }
+.heat-3{ background:#5C8DFF; }
+.heat-4{ background:#E5484D; }
+
+/* --- Reporte final (slide 9) --- */
+.report-wrap{
+    display:grid;
+    grid-template-columns:1fr 320px;
+    gap:44px;
+    align-items:center;
+}
+.report-list{ display:flex; flex-direction:column; gap:18px; }
+.report-item{ display:flex; align-items:center; gap:14px; font-size:15px; color:var(--text); }
+.report-item .icon-badge{ width:38px; height:38px; font-size:16px; }
+
+.completion-card{
+    background:#EEF3FF;
+    border:1px solid #D9E4FF;
+    border-radius:var(--radius-lg);
+    padding:44px 30px;
+    text-align:center;
+}
+.completion-card .trophy{
+    width:64px; height:64px;
+    border-radius:50%;
+    background:#fff;
+    display:flex; align-items:center; justify-content:center;
+    font-size:28px;
+    color:#D9720C;
+    margin:0 auto 20px;
+    box-shadow:var(--shadow-sm);
+}
+.completion-card h3{ color:var(--primary); font-size:17px; margin:0 0 12px; font-weight:700; }
+.completion-card p{ font-size:14px; color:var(--text-light); line-height:1.6; margin:0 0 18px; }
+.completion-card .status{ font-weight:700; color:#1D8A52; font-size:15px; }
+
+/* --- Responsive --- */
+@media(max-width:768px){
+    .card-grid-2,
+    .rules-grid,
+    .algo-grid,
+    .map-wrap,
+    .report-wrap,
+    .steps-grid{
+        grid-template-columns:1fr;
+    }
+    .steps-grid{ gap:28px; }
+}
+
+/* Achicar la matriz del mapa (slide 3) en desktop */
+@media(min-width:769px){
+
+    #slide-3 .slide-header{
+        padding-bottom:8px;
+    }
+
+    #slide-3 .map-wrap{
+        gap:22px;
+    }
+
+    #slide-3 .grid-map{
+        max-width:440px;
+        gap:3px;
+    }
+
+    #slide-3 .grid-cell{
+        font-size:11px;
+        border-radius:4px;
+    }
+
+    #slide-3 .legend-list{
+        gap:8px;
+    }
+
+    #slide-3 .legend-item{
+        font-size:12.5px;
+    }
+
+    #slide-3 .legend-swatch{
+        width:22px;
+        height:22px;
+        font-size:11px;
+    }
+
+}

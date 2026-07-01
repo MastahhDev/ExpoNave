@@ -1,0 +1,109 @@
+<section class="slide" id="slide-5">
+
+    <div class="paper">
+
+        <header class="slide-header animate fade-up">
+
+            <div class="slide-number">
+                05
+            </div>
+
+            <div class="section-title">
+
+                <span class="section-badge">
+                    IMPLEMENTACIÓN
+                </span>
+
+                <h1>Algoritmos</h1>
+
+                <p>
+                    Estrategia utilizada.
+                </p>
+
+            </div>
+
+        </header>
+
+        <main class="slide-body">
+
+    <div class="algo-grid">
+
+        <div class="algo-block bfs">
+
+            <h3>BFS (Breadth First Search)</h3>
+            <p class="desc">Encuentra el camino más corto hacia el objetivo actual.</p>
+
+            <div class="mini-grid" style="grid-template-columns:repeat(6,1fr);max-width:280px">
+                <div class="mini-cell start"><i class="bi bi-rocket-takeoff-fill"></i></div>
+                <div class="mini-cell visited"></div>
+                <div class="mini-cell"></div>
+                <div class="mini-cell"></div>
+                <div class="mini-cell"></div>
+                <div class="mini-cell"></div>
+
+                <div class="mini-cell visited"></div>
+                <div class="mini-cell path"></div>
+                <div class="mini-cell visited"></div>
+                <div class="mini-cell"></div>
+                <div class="mini-cell"></div>
+                <div class="mini-cell"></div>
+
+                <div class="mini-cell"></div>
+                <div class="mini-cell visited"></div>
+                <div class="mini-cell path"></div>
+                <div class="mini-cell path"></div>
+                <div class="mini-cell visited"></div>
+                <div class="mini-cell"></div>
+
+                <div class="mini-cell"></div>
+                <div class="mini-cell"></div>
+                <div class="mini-cell visited"></div>
+                <div class="mini-cell visited"></div>
+                <div class="mini-cell path"></div>
+                <div class="mini-cell objective"><i class="bi bi-box-seam-fill"></i></div>
+            </div>
+
+            <div class="mini-legend">
+                <span><i style="background:#CFE0FF"></i> Nodo visitado</span>
+                <span><i style="background:#22A366"></i> Camino encontrado</span>
+                <span><i style="background:#7C5CFC"></i> Objetivo</span>
+            </div>
+
+        </div>
+
+        <div class="algo-block heur">
+
+            <h3>Exploración heurística</h3>
+            <p class="desc">Selecciona la casilla menos visitada para explorar el mapa.</p>
+
+            <div class="num-table">
+                <div class="num-cell">3</div>
+                <div class="num-cell">2</div>
+                <div class="num-cell">4</div>
+                <div class="num-cell">2</div>
+                <div class="num-cell center">1</div>
+                <div class="num-cell">3</div>
+                <div class="num-cell">4</div>
+                <div class="num-cell">3</div>
+                <div class="num-cell">2</div>
+            </div>
+
+            <div class="mini-legend">
+                <span>Se elige la casilla con menor cantidad de visitas.</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+        <footer class="slide-footer">
+
+            {% include "expo/partials/arrow.html" %}
+
+        </footer>
+
+    </div>
+
+</section>

@@ -1,0 +1,188 @@
+/* ============================================
+   SLIDE 1 — COVER ESPACIAL
+   Tema oscuro exclusivo de la portada.
+   Todo scopeado bajo #slide-1 para no tocar
+   el resto de los slides (tema claro).
+   ============================================ */
+
+#slide-1{
+    --space-bg-1:#0A1128;
+    --space-bg-2:#060912;
+    --space-text:#F3F5FC;
+    --space-text-dim:#9BA7C7;
+    --space-accent:#4C82FF;
+    --space-accent-light:#8FB4FF;
+    --rock-1:#5A6478;
+    --rock-2:#2C3242;
+    --planet-1:#8794B4;
+    --planet-2:#333A4E;
+    --fin-accent:#FF7A45;
+}
+
+#slide-1 .paper{
+    position:relative;
+    overflow:hidden;
+    background:
+        radial-gradient(120% 90% at 78% 10%, rgba(76,130,255,.20), transparent 60%),
+        radial-gradient(90% 70% at 6% 95%, rgba(76,130,255,.10), transparent 55%),
+        linear-gradient(155deg, var(--space-bg-1), var(--space-bg-2) 65%);
+    color:var(--space-text);
+}
+
+/* --- Starfield: capa 1 (puntos distribuidos a mano) --- */
+#slide-1 .paper::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
+    background-image:
+        radial-gradient(1.6px 1.6px at 12% 18%, #fff, transparent),
+        radial-gradient(1.2px 1.2px at 26% 42%, #fff, transparent),
+        radial-gradient(1.8px 1.8px at 40% 12%, #fff, transparent),
+        radial-gradient(1.2px 1.2px at 55% 30%, #fff, transparent),
+        radial-gradient(1.4px 1.4px at 30% 65%, #fff, transparent),
+        radial-gradient(1.1px 1.1px at 80% 20%, #fff, transparent),
+        radial-gradient(1.6px 1.6px at 90% 42%, #fff, transparent),
+        radial-gradient(1.2px 1.2px at 18% 82%, #fff, transparent),
+        radial-gradient(1.4px 1.4px at 48% 85%, #fff, transparent),
+        radial-gradient(1.2px 1.2px at 66% 78%, #fff, transparent),
+        radial-gradient(1.8px 1.8px at 88% 78%, #fff, transparent),
+        radial-gradient(1.1px 1.1px at 96% 92%, #fff, transparent);
+    opacity:.85;
+}
+
+/* --- Starfield: capa 2 (patrón tileado para densidad) --- */
+#slide-1 .paper::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
+    background-image:
+        radial-gradient(1px 1px at 10px 15px, rgba(255,255,255,.55), transparent),
+        radial-gradient(1px 1px at 60px 90px, rgba(255,255,255,.4), transparent),
+        radial-gradient(1px 1px at 120px 40px, rgba(255,255,255,.5), transparent),
+        radial-gradient(1px 1px at 170px 130px, rgba(255,255,255,.35), transparent);
+    background-repeat:repeat;
+    background-size:200px 200px;
+    opacity:.6;
+}
+
+/* --- Header (badge + contador de página) --- */
+#slide-1 .slide-header-top{
+    position:relative;
+    z-index:3;
+}
+
+#slide-1 .section-badge{
+    background:rgba(76,130,255,.14);
+    border:1px solid rgba(76,130,255,.35);
+    color:var(--space-accent-light);
+    backdrop-filter:blur(6px);
+}
+
+#slide-1 .slide-page{
+    color:var(--space-text-dim);
+}
+
+#slide-1 .slide-page #current-page{
+    color:var(--space-text);
+}
+
+/* --- Cuerpo: ilustración + copy --- */
+#slide-1 .slide-body{
+    position:relative;
+    z-index:1;
+    min-height:560px;
+}
+
+#slide-1 .hero-art{
+    position:absolute;
+    inset:0;
+    z-index:1;
+}
+
+#slide-1 .hero-art svg{
+    width:100%;
+    height:100%;
+    overflow:visible;
+}
+
+#slide-1 .hero-copy{
+    position:absolute;
+    left:0;
+    bottom:10px;
+    max-width:460px;
+    z-index:3;
+}
+
+#slide-1 .hero-copy h1{
+    font-size:46px;
+    line-height:1.08;
+    font-weight:800;
+    letter-spacing:-.5px;
+    margin:0 0 14px;
+    color:var(--space-text);
+    text-transform:uppercase;
+}
+
+#slide-1 .hero-subtitle{
+    font-size:19px;
+    color:var(--space-accent-light);
+    font-weight:600;
+    margin:0 0 20px;
+}
+
+#slide-1 .hero-desc{
+    font-size:15px;
+    line-height:1.65;
+    color:var(--space-text-dim);
+    margin:0 0 26px;
+    max-width:400px;
+}
+
+#slide-1 .hero-dots{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+#slide-1 .hero-dots span{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:rgba(255,255,255,.25);
+    transition:var(--transition);
+    display:block;
+}
+
+#slide-1 .hero-dots span.active{
+    width:26px;
+    border-radius:5px;
+    background:var(--space-text);
+}
+
+/* --- Footer / flecha en versión clara sobre fondo oscuro --- */
+#slide-1 .slide-footer{
+    position:relative;
+    z-index:3;
+}
+
+#slide-1 .slide-footer svg path,
+#slide-1 .slide-footer svg circle{
+    stroke:var(--space-text);
+}
+
+/* --- Contenedor exterior del slide 1: sin marco duro ---
+   Se degrada del oscuro del paper hacia el fondo claro
+   general de la página, en vez de un borde blanco recto. */
+#slide-1{
+    background:
+        radial-gradient(
+            140% 120% at 50% 45%,
+            var(--space-bg-1) 0%,
+            var(--space-bg-2) 55%,
+            var(--background-2) 100%
+        );
+}

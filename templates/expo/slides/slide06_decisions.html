@@ -1,0 +1,68 @@
+<section class="slide" id="slide-6">
+
+    <div class="paper">
+
+        <header class="slide-header animate fade-up">
+
+            <div class="slide-number">
+                06
+            </div>
+
+            <div class="section-title">
+
+                <span class="section-badge">
+                    LÓGICA
+                </span>
+
+                <h1>Toma de decisiones</h1>
+
+                <p>
+                    Criterios utilizados durante la ejecución.
+                </p>
+
+            </div>
+
+        </header>
+
+        <main class="slide-body">
+
+    <p class="slide-intro">La nave evalúa su estado en cada paso y decide:</p>
+
+    <div class="flow-list">
+
+        <div class="flow-row">
+            <div class="flow-box q-green">¿Combustible ≤ 30%?</div>
+            <span class="flow-arrow"><i class="bi bi-arrow-right"></i> Sí</span>
+            <span class="flow-result">Buscar combustible</span>
+        </div>
+
+        <div class="flow-row">
+            <div class="flow-box q-purple">¿Bodega con espacio?</div>
+            <span class="flow-arrow"><i class="bi bi-arrow-right"></i> Sí</span>
+            <span class="flow-result">Buscar contenedor</span>
+        </div>
+
+        <div class="flow-row">
+            <div class="flow-box q-orange">No hay objetivos alcanzables</div>
+            <span class="flow-arrow"><i class="bi bi-arrow-right"></i></span>
+            <span class="flow-result">Explorar mapa</span>
+        </div>
+
+    </div>
+
+    <div class="callout" style="margin-top:30px">
+        <span class="icon-badge blue"><i class="bi bi-info-circle-fill"></i></span>
+        <p>Siempre elige el camino más eficiente según la situación actual.</p>
+    </div>
+
+</main>
+
+        <footer class="slide-footer">
+
+            {% include "expo/partials/arrow.html" %}
+
+        </footer>
+
+    </div>
+
+</section>
